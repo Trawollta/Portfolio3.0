@@ -1,0 +1,22 @@
+@import '../../scss-styles/variables.scss';
+@import './../../styles.scss';
+
+ app-hero {
+   height: calc(100vh - 70px - 10px);
+   height: calc(100dvh - 70px - 10px);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   background-color: $anthracite-medium;
+   position: relative;
+// //   z-index: 1;
+ }
+
+ app-about-me {
+  display: flex;
+   justify-content: space-between;
+   align-items: center;
+  background-color: $anthracite-medium;
+   padding: 20px;
+// //   border: orchid 2px solid;
+ }

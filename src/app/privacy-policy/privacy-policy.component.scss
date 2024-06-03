@@ -1,0 +1,73 @@
+@import '../../scss-styles/variables.scss';
+@import './../../styles.scss';
+
+.privacy-container {
+  background-color: #1E2D3D; // Set the background color to match the rest of the background
+  display: flex;
+  flex-direction: column;
+}
+
+.privacy {
+  line-height: 1.6;
+  margin: 0;
+  padding: 40px;
+  background-color: #1E2D3D;
+}
+
+h1 {
+  font-size: 23px;
+  color: white;
+}
+
+h2 {
+  font-size: 24px;
+  color: white;
+  margin-top: 20px;
+}
+
+p {
+  margin-bottom: 20px;
+  color: $bluegray;
+}
+
+address {
+  font-style: normal;
+  color: $bluegray;
+}
+
+ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 40px;
+}
+
+.arrowback {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #1E2D3D;
+  position: sticky;
+
+  img {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+
+@media screen and (min-width: 500px) {
+  .arrowback {
+    position: relative;
+    top: 70px; // Adjust the top value to position it below the burger menu
+    right: 10px; // Adjust the right value to position it at the right end
+    margin-bottom: 20px;
+    background-color: #1E2D3D;
+  }
+}

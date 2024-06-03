@@ -1,0 +1,17 @@
+[
+    {
+      "name": "DA-Bubble",
+      "language": "Angular | TypeScript | HTML | CSS | Firebase",
+      "description": "Its a slack clone",
+      "git": "git.jan-woll.de",
+      "live": "https://www.bubble.jan-woll.de"
+    },
+    {
+      "name": "Project2",
+      "language": "Angular | TypeScript",
+      "description": "Its a slack clone",
+      "git": "git.example.com/project2",
+      "live": "https://www.example.com/project2"
+    }
+    
+  ]

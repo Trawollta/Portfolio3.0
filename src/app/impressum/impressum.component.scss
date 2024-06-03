@@ -1,0 +1,75 @@
+@import '../../scss-styles/variables.scss';
+@import './../../styles.scss';
+
+.impressum {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $anthracite-medium;
+    color: $bluegray;
+    font-family: "Fira Code";
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: $white;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin: 10px 0;
+        text-align: center;
+
+        strong {
+            font-weight: bold;
+            color: $white;
+        }
+
+        a {
+            color: $orange;
+            text-decoration: none;
+            font-weight: bold;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.arrow {
+    color: green;
+}
+
+.arrowback {
+
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    cursor: pointer;
+
+    @media screen and (min-width: 1000px) {
+
+    position: fixed;
+    top: 180px;
+    right: 53px;
+    cursor: pointer;
+
+    }
+
+
+
+    img {
+        width: 50px; 
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}

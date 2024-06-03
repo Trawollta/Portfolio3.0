@@ -1,0 +1,189 @@
+@import '../../scss-styles/variables.scss';
+
+.my-projects-component {
+  background-color: $anthracite-medium;
+  overflow-x: hidden; 
+}
+
+.header {
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 23px;
+}
+
+h2 {
+  color: var(--White, $white);
+  font-size: 50px;
+  font-weight: bold;
+  padding:40px;
+  @media screen and (min-width: 700px) {
+    font-size: 64px;
+  }
+}
+
+
+.project-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 43rem;
+
+  @media screen and (min-width: 1000px) {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 35rem;
+    width: 100%;
+
+  }
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 40px;
+}
+
+.textarea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: $white;
+  gap: 20px;
+  width: 85%;
+  margin-top: 20px;
+
+  @media screen and (min-width: 1000px) {
+        width: 42%;
+        align-items: flex-start;
+        text-align: left;
+        gap: 6px;
+  }
+}
+
+.project-scene {
+  position: relative;
+  width: 300px;
+
+  @media screen and (min-width: 1000px) {
+    width: 397px;
+    height: 248px;
+  }
+}
+
+.project-screen {
+  position: absolute;
+  top: 13px;
+  left: 32px;
+  width: 229px;
+  height: 151px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media screen and (min-width: 1000px) {
+    top: 17px;
+    left: 48px;
+    width: 295px;
+    height: 181px;
+  }
+}
+
+.project-screen-img {
+  width: 300px;
+  height: 200px;
+
+  @media screen and (min-width: 1000px) {
+    width: 397px;
+    height: 248px;
+  }
+}
+
+.project-class-left,
+.project-class-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 1000px) {
+    gap: 250px;
+  }
+}
+
+.project-class-right {
+  @media screen and (min-width: 1000px) {
+    flex-direction: row-reverse;
+    gap: 250px;
+  }
+}
+
+.project-name {
+  font-size: 38px;
+  font-weight: bold;
+  @media screen and (min-width: 900px) {
+    font-size: 45px;
+  }
+}
+
+.project-language {
+  font-size: 25px;
+  @media screen and (min-width: 900px) {
+    font-size: 25px;
+  }
+}
+
+.project-description {
+  font-size: 20px;
+  color: $bluegray;
+  @media screen and (min-width: 900px) {
+    font-size: 23px;
+  }
+}
+
+.button-area {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.git,
+.live {
+  display: inline-block;
+  padding: 15px 30px; /* Increased padding for larger buttons */
+  color: $white;
+  text-decoration: none;
+  border-radius: 15px; /* Increased border radius for larger buttons */
+  transition: all 0.3s ease;
+  font-size: 20px; /* Increased font size for larger buttons */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box shadow */
+}
+
+.git {
+  background-color: $mint-green;
+  border: 1px solid transparent;
+}
+
+.live {
+  background-color: $orange;
+  border: 1px solid $orange;
+}
+
+.git:hover,
+.live:hover {
+  transform: scale(1.15);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Stronger box shadow on hover */
+}
+
+.g-btn,
+.l-btn {
+  text-decoration: none;
+  color: $white;
+  font-weight: bold;
+}

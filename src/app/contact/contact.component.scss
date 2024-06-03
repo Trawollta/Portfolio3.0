@@ -1,0 +1,313 @@
+@import '../../scss-styles/variables.scss';
+@import './../../styles.scss';
+
+.w-90 {
+  background-color: $anthracite-medium;
+}
+
+.headline {
+  display: flex;
+  justify-content: center;
+  color: $white;
+  font-size: 50px;
+  font-weight: bold;
+  padding: 40px;
+
+  @media (min-width: 800px) {
+    font-size: 64px;
+  }
+}
+
+.dark-white {
+  margin-top: 30px;
+}
+
+.contact-me {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.contactfield {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 20px;
+
+  @media (min-width: 800px) {
+    width: 500px;
+  }
+
+  @media (min-width: 1000px) {
+    width: 550px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 700px;
+  }
+}
+
+.name-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.contact-headline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  color: $white;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%; // Add this line to ensure full width
+}
+
+.darker-font {
+  color: $darkblue;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  @media (min-width: 1024px) {
+    padding: 40px;
+  }
+}
+
+.description {
+  color: $lightbottlegreen;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.contact-content-container {
+  @media (min-width: 1000px) {
+    display: flex;
+    align-items: flex-start;
+    gap: 250px;
+  }
+
+  .contact-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    p {
+      font-weight: 400;
+      color: $bluegray;
+      font-size: 20px;
+
+      @media (min-width: 1024px) {
+        font-size: 32px;
+      }
+
+      span {
+        font-weight: 900;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      max-width: 240px;
+      margin-top: 31px;
+    }
+  }
+}
+
+.form-alpha-container {
+  width: 100%;
+  max-width: 800px; // Add this line to limit the maximum width
+  
+  @media (min-width: 1024px) {
+    width: 100%;
+  }
+
+  .form-container {
+    .form-inner-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      input,
+      textarea {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 50px;
+        background: $anthracite-dark;
+        border: 1px solid $bluegray;
+        border-radius: 10px;
+        outline: none;
+        color: $white;
+        cursor: pointer;
+        width: 100%;
+        font-size: 20px;
+
+        @media (min-width: 1024px) {
+          width: 100%;
+        }
+
+        &::placeholder {
+          color: $white;
+        }
+
+        &:hover {
+          border: 1px solid $petrolblue;
+        }
+      }
+    }
+
+    .warning {
+      height: 1.25rem;
+      font-size: 0.875rem;
+      color: $mediumred;
+    }
+
+    input {
+      &.ngtouched,
+      &.ng-dirty {
+        background-repeat: no-repeat;
+        background-position: 98%;
+
+        &.ng-invalid {
+          border: 1px solid $red !important;
+        }
+
+        &.ng-valid {
+          border: 1px solid $may-green !important;
+        }
+      }
+
+      .error {
+        color: $red;
+      }
+    }
+
+    textarea {
+      height: 10.5rem;
+      resize: vertical;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+
+      &.ngtouched,
+      &.ng-dirty {
+        background-repeat: no-repeat;
+        background-position: 98% 5%;
+
+        &.ng-invalid {
+          border: 1px solid $mediumred !important;
+        }
+
+        &.ng-valid {
+          border: 1px solid $may-green !important;
+        }
+      }
+    }
+
+    @media (min-width: 1000px) {
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+      }
+    }
+  }
+
+  .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-family: 'Fira Code';
+      font-size: 14px;
+      line-height: 120%;
+      box-shadow: 4px 4px 4px $shadowgray2;
+      border-radius: 8px;
+      margin-top: 30px;
+      border: none;
+      transition: all 125ms ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $orange;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.success {
+  color: $may-green;
+}
+
+.alert-text {
+  color: $mediumred !important;
+}
+
+.checkBox {
+  width: 100%;
+  display: flex;
+  color: $white;
+}
+
+.inputCheckBox {
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 10px;
+}
+
+.deactivated {
+  cursor: not-allowed !important;
+  background-color: grey !important;
+
+  &:hover {
+    background-color: grey !important;
+    transform: none !important;
+  }
+}
+
+.privacy {
+  color: $bluegray;
+}
+
+.privacy a {
+  color: $white;
+}
+
+.blue-text {
+  color: $orange;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.first {
+  display: flex;
+}

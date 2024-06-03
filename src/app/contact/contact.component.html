@@ -1,0 +1,79 @@
+<div class="w-90 container">
+  <div class="headline">
+    <span translate>headline</span>
+  </div>
+  <div class="contact-content-container mt-1">
+    <div class="contact-text-container">
+      <div class="first">
+        <p class="contact-me" translate>contact-me</p>
+      </div>
+      <div>
+        <p class="contact-me" translate>message-me</p>
+      </div>
+    </div>
+    <div class="contactfield">
+      <form [formGroup]="contactForm" class="form-alpha-container" (ngSubmit)="submitted()" method="POST">
+        <div class="form-container">
+          <div class="input-container">
+            <div class="name-container">
+              <label for="inputName" class="description" translate>your-name</label>
+            </div>
+            <div class="form-inner-container">
+              <input id="inputName" type="text" [placeholder]="''" formControlName="name">
+            </div>
+            <div class="warning">
+              <span class="alertText" *ngIf="contactForm.controls['name'].invalid && (contactForm.controls['name'].touched || contactForm.controls['name'].dirty)" translate>Your name is required (min-length: 2)</span>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="name-container">
+              <label for="inputMail" class="description" translate>your-email</label>
+            </div>
+            <div class="form-inner-container">
+              <input id="inputMail" type="email" [placeholder]="''" formControlName="email">
+            </div>
+            <div class="warning">
+              <span class="alertText" *ngIf="contactForm.controls['email'].invalid && (contactForm.controls['email'].touched || contactForm.controls['email'].dirty)" translate>Your email is required</span>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="name-container">
+              <label for="inputMessage" class="description">{{ "your-message" | translate }}</label>
+            </div>
+            <div class="form-inner-container">
+              <textarea id="inputMessage" cols="30" rows="10" [placeholder]="''" formControlName="message"></textarea>
+            </div>
+            <div class="warning">
+              <span class="alertText" *ngIf="contactForm.controls['message'].invalid && (contactForm.controls['message'].touched || contactForm.controls['message'].dirty)" translate>Your message is required (min-length: 5)</span>
+            </div>
+          </div>
+          <div class="checkBox">
+            <input type="checkbox" id="privacyPolicy" class="inputCheckBox" formControlName="checked">
+            <label for="privacyPolicy">
+              <span class="privacy-policy-text">
+                {{ 'privacy-one' | translate }} 
+                <a routerLink="/privacy">
+                  <span class="blue-text">{{ 'blue' | translate }}</span>
+                </a>
+              </span>
+            </label>
+          </div>
+          <div class="button-container">
+            <button 
+              [disabled]="!contactForm.valid || sending || !contactForm.controls['checked'].value" 
+              [class.deactivated]="!contactForm.valid || sending || !contactForm.controls['checked'].value" 
+              type="submit" 
+              class="bg-darker-font" 
+              translate>
+              send-button
+            </button>
+          </div>
+          <div class="warning">
+            <div *ngIf="sending" class="success" translate>Sending message</div>
+            <div *ngIf="success" class="success" translate>Message sent successfully</div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

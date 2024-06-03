@@ -1,0 +1,197 @@
+@import '../../scss-styles/variables.scss';
+@import './../../styles.scss';
+
+.navbar {
+    background-color: $anthracite-medium;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    position: sticky;
+    z-index: 1001;
+    top: 0;
+}
+
+.about-me, .skill-set, .my-work {
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: $bluegray;
+}
+
+.language {
+    margin-right: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $bluegray;
+    cursor: pointer;
+}
+
+.language .separator {
+    width: 2px;
+    height: 20px;
+    background-color: $bluegray;
+    margin: 0 8px;
+}
+
+.language .active {
+    font-size: 20px; 
+    color: $orange;   
+}
+
+.language .inactive {
+    font-size: 14px;
+    color: $bluegray; 
+}
+
+.burgermenu, .closemenu {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 65px;
+    cursor: pointer;
+    color: white;
+}
+
+.burgermenu:hover, .closemenu:hover {
+    color: $orange;
+}
+
+.icon {
+    color: $bluegray;
+}
+
+.my-name {
+    padding: 20px;
+    color: $bluegray;
+    font-family: 'Fira Code';
+    font-size: 13px;
+    cursor: pointer;
+    position: relative;
+
+    @media (min-width: 700px) {
+        font-size: 18px;
+    }
+
+    @media (min-width: 900px) {
+        font-size: 24px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: transparent;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+    &:hover::after {
+        background-color: orange;
+        transform: scaleX(1);
+    }
+}
+
+.no-underline {
+    text-decoration: none;
+    color: $bluegray;
+    cursor: default;
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+        color: $bluegray;
+    }
+}
+
+.active-link {
+    font-weight: bold;
+    color: white;
+}
+
+.navbar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $bluegray;
+}
+
+.dektop750 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: $anthracite-medium;
+    z-index: 1000; 
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.mobile-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #1E2D3D;
+    z-index: 1000; 
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.mobile-link {
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.desktop-menu-item {
+    @media (min-width: 700px) {
+        display: none;
+        display: flex;
+    }
+}
+
+.close-menu {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.close {
+    width: 35px;
+    height: 49px;
+    font-size: 35px;
+}

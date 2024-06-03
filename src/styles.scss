@@ -1,0 +1,32 @@
+@import "./scss-styles/variables.scss";
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    width:100%;
+    scroll-padding-top: 70px;
+}
+
+// img {
+//     max-width: 100%;
+// }
+
+body {
+    font-family: 'Fira Code';
+
+    @media (min-width: 1000px) {
+        
+            background-color: #1E2D3D;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+}
+
+
+.d-none {
+    display: none;
+}

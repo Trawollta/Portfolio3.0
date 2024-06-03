@@ -1,0 +1,39 @@
+<div class="navbar">
+    <div class="my-name">
+        <a href="#start" class="no-underline">jan-woll</a> 
+    </div>
+
+    <div class="dektop750" *ngIf="isDesktopSize">
+        <div class="my-name" [ngClass]="{'active-link': currentSection === 'about-me'}">
+            <a href="#about-me" class="about-me" #aboutMeLink (click)="setCurrentSection('about-me')">{{ 'about-me' | translate }}</a>
+        </div>
+        <div class="my-name" [ngClass]="{'active-link': currentSection === 'skill-set'}">
+            <a href="#skill-set" class="skill-set" #skillSetLink (click)="setCurrentSection('skill-set')">{{ 'skill-set' | translate }}</a>
+        </div>
+        <div class="my-name" [ngClass]="{'active-link': currentSection === 'my-work'}">
+            <a href="#my-work" class="my-work" #myWorkLink (click)="setCurrentSection('my-work')">{{ 'my-work' | translate }}</a>
+        </div>
+
+        <div class="language">
+            <div class="DE" (click)="switchLanguage('de')" [ngClass]="{'active': translateService.currentLang === 'de', 'inactive': translateService.currentLang !== 'de'}">DE</div>
+            <div class="separator"></div>
+            <div class="EN" (click)="switchLanguage('en')" [ngClass]="{'active': translateService.currentLang === 'en', 'inactive': translateService.currentLang !== 'en'}">EN</div>
+        </div>
+    </div>
+
+    <div class="burgermenu" *ngIf="!isMenuActive && !isDesktopSize" (click)="toggleMenu()">
+        <img class="icon" src="assets/icons/Property 1=burger.svg" alt="Burger Menu">
+    </div>
+
+    <div class="closemenu" *ngIf="isMenuActive && !isDesktopSize" (click)="toggleMenu()">
+        <span class="close">X</span>
+    </div>
+</div>
+
+<div class="mobile-menu" [class.active]="isMenuActive">
+    <a class="mobile-link" (click)="toggleMenu('about-me')">{{ 'about-me' | translate }}</a>
+    <a class="mobile-link" (click)="toggleMenu('skill-set')">{{ 'skill-set' | translate }}</a>
+    <a class="mobile-link" (click)="toggleMenu('my-work')">{{ 'my-work' | translate }}</a>
+    <a class="mobile-link" (click)="switchLanguage('de')" [class.active]="translateService.currentLang === 'de'">DE</a>
+    <a class="mobile-link" (click)="switchLanguage('en')" [class.active]="translateService.currentLang === 'en'">EN</a>
+</div>
