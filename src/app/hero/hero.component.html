@@ -1,17 +1,17 @@
 <div class="hero">
   <div class="text-section">
     <div class="text-box">
-      <div class="greet typing-animation hidden-text" #typingGreet>
-        <span class="text greet-text"></span><span class="cursor" #cursorGreet>|</span>
+      <div class="greet typing-animation" [ngClass]="{'hidden-text': !showGreet}">
+        <span class="text greet-text">{{'Hi all!' | translate}}</span><span class="cursor" *ngIf="showCursorGreet"></span>
       </div>
-      <div class="name typing-animation hidden-text" #typingName>
-        <span class="text name-text"></span><span class="cursor" #cursorName>|</span>
+      <div class="name typing-animation" [ngClass]="{'hidden-text': !showName}">
+        <span class="text name-text">{{'I am' | translate }} Jan Woll</span><span class="cursor" *ngIf="showCursorName"></span>
       </div>
-      <div class="job typing-animation hidden-text" #typingJob>
-        <span class="text job-text"></span><span class="cursor" #cursorJob>|</span>
+      <div class="job typing-animation" [ngClass]="{'hidden-text': !showJob}">
+        <span class="text job-text"> >{{'frontend developer' | translate }}</span><span class="cursor" *ngIf="showCursorJob"></span>
       </div>
-      <div class="welcome typing-animation hidden-text" #typingWelcome>
-        <span class="text welcome-text"></span><span class="cursor" #cursorWelcome>|</span>
+      <div class="welcome typing-animation" [ngClass]="{'hidden-text': !showWelcome}">
+        <span class="text welcome-text">{{'welcome to my website' | translate }}</span><span class="cursor" *ngIf="showCursorWelcome"></span>
       </div>
     </div>
   </div>

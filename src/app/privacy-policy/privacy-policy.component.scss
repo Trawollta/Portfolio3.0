@@ -2,9 +2,10 @@
 @import './../../styles.scss';
 
 .privacy-container {
-  background-color: #1E2D3D; // Set the background color to match the rest of the background
+  background-color: #1E2D3D;
   display: flex;
   flex-direction: column;
+  position: relative; 
 }
 
 .privacy {
@@ -15,12 +16,12 @@
 }
 
 h1 {
-  font-size: 23px;
+  font-size: 24px;
   color: white;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 21px;
   color: white;
   margin-top: 20px;
 }
@@ -44,11 +45,14 @@ li {
   margin-bottom: 40px;
 }
 
-.arrowback {
+.arrowback-container {
   display: flex;
   justify-content: flex-end;
   background-color: #1E2D3D;
-  position: sticky;
+  top: 60px;
+  right: 20px; 
+  z-index: 1000; 
+  margin-top: 10px;
 
   img {
     width: 50px;
@@ -56,18 +60,13 @@ li {
     cursor: pointer;
   }
 
-  &:hover {
-    transform: scale(1.1);
   }
-}
-
 
 @media screen and (min-width: 500px) {
   .arrowback {
-    position: relative;
-    top: 70px; // Adjust the top value to position it below the burger menu
-    right: 10px; // Adjust the right value to position it at the right end
-    margin-bottom: 20px;
-    background-color: #1E2D3D;
+    width: 50px;
+    cursor: pointer;
+    margin-top: 70px;
+    margin-right: 32px;
   }
 }

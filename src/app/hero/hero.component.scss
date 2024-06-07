@@ -23,7 +23,6 @@
 
   @media (min-width: 1000px) {
     height: 50vh;
-    font-size: 28px;
     width: 58vw;
   }
 }
@@ -45,6 +44,7 @@
   .greet-text {
     font-size: 20px;
     color: white;
+    font-weight: normal;
 
     @media (min-width: 1000px) {
       font-size: 65px;
@@ -52,9 +52,10 @@
   }
 
   .name-text {
-    font-size: 20px;
+    font-size: 22px;
     color: white;
-    font-weight: bold;
+    font-weight: normal;
+
     @media (min-width: 1000px) {
       font-size: 45px;
     }
@@ -63,6 +64,7 @@
   .job-text {
     font-size: 30px;
     color: $mint-green;
+
     @media (min-width: 1000px) {
       font-size: 50px;
     }
@@ -71,6 +73,7 @@
   .welcome-text {
     font-size: 21px;
     color: white;
+
     @media (min-width: 1000px) {
       font-size: 35px;
     }
@@ -232,6 +235,7 @@
   cursor: pointer;
   background-color: $orange;
   border: 1px solid $orange;
+  margin-top: 50px;
 
   &:hover {
     transform: scale(1.1);
@@ -243,16 +247,73 @@
   }
 }
 
-@keyframes blink {
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
+.greet {
+  font-size: 20px;
+  color: white;
+  font-weight: normal;
+
+  @media (min-width: 1000px) {
+    font-size: 65px;
+  }
+}
+
+.name {
+  font-size: 22px;
+  color: white;
+  font-weight: bold;
+
+  @media (min-width: 1000px) {
+    font-size: 45px;
+  }
+}
+
+.job {
+  font-size: 30px;
+  color: $mint-green;
+
+  @media (min-width: 1000px) {
+    font-size: 50px;
+  }
+}
+
+.welcome {
+  font-size: 21px;
+  color: white;
+
+  @media (min-width: 1000px) {
+    font-size: 35px;
+  }
+}
+
+
+.typing-animation {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid white;
+  visibility: hidden; /* Hidden by default, shown by JS */
+}
+
+@keyframes typingEffect {
+  from {
+    width: 0;
+    border-right: 0.15em solid white;
+  }
+  to {
+    width: 100%;
+    border-right: none;
+  }
+}
+
+.typing-effect-active {
+  visibility: visible;
+  animation: typingEffect 2s steps(30, start) forwards; /* Adjusted duration for faster typing */
 }
 
 .cursor {
   display: inline-block;
   width: 1px;
-  background-color: black;
+  background-color: white;
   animation: blink 1s step-start infinite;
 }
 
@@ -260,44 +321,8 @@
   visibility: hidden;
 }
 
-/* Ein- und Ausblenden-Animationen */
-.fade-in {
-  animation: fadeIn 1s forwards;
-}
-
-.fade-out {
-  animation: fadeOut 1s forwards;
-}
-
-.slide-in-left {
-  animation: slideInLeft 1s forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
 }
